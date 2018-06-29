@@ -54,7 +54,7 @@ This bot demonstrates many of the core features of Botkit:
 var env = require('node-env-file');
 env(__dirname + '/.env');
 
-
+c=0;
 if (!process.env.clientId || !process.env.clientSecret || !process.env.PORT) {
   usage_tip();
   // process.exit(1);
@@ -126,10 +126,21 @@ controller.hears('company_name', 'direct_message', dialogflowMiddleware.hears, f
   bot,
   message
 ) {
+  c=c+1
   console.log('message', message)
   bot.reply(message, 'What were your goals this past week');
 });
 
+id(c==1){
+  controller.hears('goals', 'direct_message', dialogflowMiddleware.hears, function (
+  bot,
+  message
+) {
+  c=c+1
+  console.log('message', message)
+  bot.reply(message, 'Where did you have your biggest ROI for your time?');
+});
+}
 // controller.hears('goals', 'direct_message', dialogflowMiddleware.hears, function (
 //   bot,
 //   message
