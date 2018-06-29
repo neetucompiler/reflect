@@ -131,7 +131,7 @@ controller.hears('company_name', 'direct_message', dialogflowMiddleware.hears, f
   bot.reply(message, 'What were your goals this past week');
 });
 
-id(c==1){
+if (c==1){
   controller.hears('goals', 'direct_message', dialogflowMiddleware.hears, function (
   bot,
   message
