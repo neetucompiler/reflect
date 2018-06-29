@@ -128,7 +128,7 @@ controller.hears('company_name', 'direct_message', dialogflowMiddleware.hears, f
 ) {
   console.log('message', message)
   bot.reply(message, 'What were your goals this past week');
- 
+
 });
 
 controller.hears('goals', 'direct_message', dialogflowMiddleware.hears, function (
@@ -140,6 +140,7 @@ controller.hears('goals', 'direct_message', dialogflowMiddleware.hears, function
       text: "Where did you have your biggest ROI for your time?",
       channel: 'DBESQD06S' // channel Id for #slack_integration
   });
+    console.log(message)
   }
 });
 // controller.hears('goals', 'direct_message', dialogflowMiddleware.hears, function (
