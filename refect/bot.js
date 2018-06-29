@@ -99,10 +99,7 @@ slackBot.startRTM();
 controller.startTicking();
 // listen for a message containing the world "hello", and send a reply
 controller.on(['direct_message', 'direct_mention'], function (bot, message) {
-  // do something!
-  console.log(JSON.stringify(bot))
-  console.log(JSON.stringify(message));
-  
+  // do something!  
   bot.reply(message, 'Hello human')
 });
 // listen for literal string 'hello-intent' (case insensitive)
