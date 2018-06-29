@@ -101,7 +101,7 @@ controller.startTicking();
 controller.on(['direct_message', 'direct_mention'], function (bot, message) {
   // do something!  
   console.log('message', message)
-  bot.reply(message, 'Hello human')
+  // bot.reply(message, 'Hello human')
 });
 // listen for literal string 'hello-intent' (case insensitive)
 controller.hears('hello-intent', 'direct_message', dialogflowMiddleware.hears, function (
@@ -126,18 +126,17 @@ controller.hears('company_name', 'direct_message', dialogflowMiddleware.hears, f
   bot,
   message
 ) {
-  c=c+1
   console.log('message', message)
   bot.reply(message, 'What were your goals this past week');
 });
-if (c==1) {controller.hears('goals', 'direct_message', dialogflowMiddleware.hears, function (
+
+controller.hears('goals', 'direct_message', dialogflowMiddleware.hears, function (
   bot,
   message
 ) {
-  c=c+1
   console.log('message', message)
   bot.reply(message, 'Where did you have your biggest ROI for your time?');
-});}
+});
 // controller.hears('goals', 'direct_message', dialogflowMiddleware.hears, function (
 //   bot,
 //   message
