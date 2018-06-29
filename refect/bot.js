@@ -140,7 +140,7 @@ controller.hears('goals', 'direct_message', dialogflowMiddleware.hears, function
       text: "Where did you have your biggest ROI for your time?",
       channel: 'DBESQD06S' // channel Id for #slack_integration
   });
-    console.log(message.result)
+    console.log(JSON.stringify(message.result))
   }
 });
 // controller.hears('goals', 'direct_message', dialogflowMiddleware.hears, function (
