@@ -142,7 +142,7 @@ controller.hears('company_name', 'direct_message', dialogflowMiddleware.hears, f
 // ) {
 //   console.log('message', message)
 //   bot.reply(message, 'Where did you have your biggest ROI for your time?');
-});
+// });
 // controller.hears('goals', 'direct_message', dialogflowMiddleware.hears, function (
 //   bot,
 //   message
