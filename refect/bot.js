@@ -142,7 +142,7 @@ controller.hears('goals', 'direct_message', dialogflowMiddleware.hears, function
   });
     // var ob = JSON.parse(message)
     // console.log('-----------')
-    // console.log(ob)
+    console.log(message)
   }
 });
 // controller.hears('goals', 'direct_message', dialogflowMiddleware.hears, function (
