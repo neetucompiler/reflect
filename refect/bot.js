@@ -100,6 +100,7 @@ controller.startTicking();
 // listen for a message containing the world "hello", and send a reply
 controller.on(['direct_message', 'direct_mention'], function (bot, message) {
   // do something!  
+  console.log('message', message)
   bot.reply(message, 'Hello human')
 });
 // listen for literal string 'hello-intent' (case insensitive)
@@ -108,6 +109,7 @@ controller.hears('hello-intent', 'direct_message', dialogflowMiddleware.hears, f
   message
 ) {
   // console.log('inside intent block')
+  console.log('message', message)
   bot.reply(message, 'Howdy!!!!');
   bot.reply(message, 'Please enter your email id Reflection for Creation');
 });
@@ -116,6 +118,7 @@ controller.hears('email', 'direct_message', dialogflowMiddleware.hears, function
   bot,
   message
 ) {
+  console.log('message', message)
   bot.reply(message, 'Oh great.Please enter your company name ');
 });
 
@@ -123,6 +126,7 @@ controller.hears('company_name', 'direct_message', dialogflowMiddleware.hears, f
   bot,
   message
 ) {
+  console.log('message', message)
   bot.reply(message, 'What were your goals this past week');
 });
 
@@ -130,6 +134,7 @@ controller.hears('goals', 'direct_message', dialogflowMiddleware.hears, function
   bot,
   message
 ) {
+  console.log('message', message)
   bot.reply(message, 'Where did you have your biggest ROI for your time');
 });
 
@@ -137,6 +142,7 @@ controller.hears('ROI', 'direct_message', dialogflowMiddleware.hears, function (
   bot,
   message
 ) {
+  console.log('message', message)
   bot.reply(message, 'What did you learn this week that you did not know previously?');
 });
 
@@ -144,6 +150,7 @@ controller.hears('learn', 'direct_message', dialogflowMiddleware.hears, function
   bot,
   message
 ) {
+  console.log('message', message)
   bot.reply(message, 'What view, if any, changed this week?');
 });
 
@@ -151,6 +158,7 @@ controller.hears('view', 'direct_message', dialogflowMiddleware.hears, function 
   bot,
   message
 ) {
+  console.log('message', message)
   bot.reply(message, 'Who was it with?');
 });
 
@@ -158,6 +166,7 @@ controller.hears('who_was', 'direct_message', dialogflowMiddleware.hears, functi
   bot,
   message
 ) {
+  console.log('message', message)
   bot.reply(message, 'What did they say and/or ask?');
 });
 
@@ -165,6 +174,7 @@ controller.hears('what_say', 'direct_message', dialogflowMiddleware.hears, funct
   bot,
   message
 ) {
+  console.log('message', message)
   bot.reply(message, 'What did they do (action taken)?');
 });
 
@@ -172,6 +182,7 @@ controller.hears('what_did', 'direct_message', dialogflowMiddleware.hears, funct
   bot,
   message
 ) {
+  console.log('message', message)
   bot.reply(message, 'How do you think they felt?');
 });
 
@@ -179,6 +190,7 @@ controller.hears('how_felt', 'direct_message', dialogflowMiddleware.hears, funct
   bot,
   message
 ) {
+  console.log('message', message)
   bot.reply(message, 'What are your goals for next week?');
 });
 
@@ -186,6 +198,7 @@ controller.hears('next_goal', 'direct_message', dialogflowMiddleware.hears, func
   bot,
   message
 ) {
+  console.log('message', message)
   bot.reply(message, 'Next week I will be...(pick 3)');
 });
 
@@ -193,6 +206,7 @@ controller.hears('pick3', 'direct_message', dialogflowMiddleware.hears, function
   bot,
   message
 ) {
+  console.log('message', message)
   bot.reply(message, 'Write your elevator pitch: ');
 });
 
@@ -200,6 +214,7 @@ controller.hears('pitch', 'direct_message', dialogflowMiddleware.hears, function
   bot,
   message
 ) {
+  console.log('message', message)
   bot.reply(message, 'Thanks alot it was grt');
 });
 // Set up an Express-powered webserver to expose oauth and webhook endpoints
