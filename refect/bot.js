@@ -110,7 +110,7 @@ controller.hears('hello-intent', 'direct_message', dialogflowMiddleware.hears, f
   bot,
   message
 ) {
-  console.log('inside intent block')
+  // console.log('inside intent block')
   bot.reply(message, 'Howdy!!!!');
   bot.reply(message, 'Please enter your email id Reflection for Creation');
 });
